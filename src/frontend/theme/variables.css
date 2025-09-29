@@ -1,0 +1,36 @@
+/* src/frontend/theme/variable.css */
+/*
+  This file is intended for CSS variables if needed, but Tailwind
+  classes are generally preferred for styling.
+
+  Example:
+  :root {
+    --primary-color: #4F46E5;
+    --secondary-color: #FBBF24;
+    --accent-color: #10B981;
+    --danger-color: #EF4444;
+    --bg-color: #F3F4F6;
+    --card-color: #FFFFFF;
+  }
+*/
+
+/*
+  Alternatively, you can define Tailwind's default colors in tailwind.config.js
+  and reference them there, which is the standard Tailwind approach.
+  Since the requirement is to use these colors, we'll ensure they are mapped
+  in tailwind.config.js.
+
+  For example, in tailwind.config.js:
+  theme: {
+    extend: {
+      colors: {
+        primary: '#4F46E5',
+        secondary: '#FBBF24',
+        accent: '#10B981',
+        danger: '#EF4444',
+        bg: '#F3F4F6',
+        card: '#FFFFFF',
+      },
+    },
+  },
+*/

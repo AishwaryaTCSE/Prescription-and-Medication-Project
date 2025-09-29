@@ -1,0 +1,26 @@
+/* src/frontend/layouts/Layout.module.css */
+
+/*
+  This module can be used for layout-specific styles that are not easily
+  achieved with Tailwind classes alone, or to encapsulate complex styles.
+  However, the goal is to rely primarily on Tailwind for consistency.
+
+  Example: A subtle background animation or a specific transition.
+*/
+
+.mainContentWrapper {
+  /* Example: Add padding that adjusts based on sidebar state */
+  /* This would typically be controlled by JS based on sidebar visibility */
+  transition: padding-left 0.3s ease-in-out;
+}
+
+.sidebarCollapsed .mainContentWrapper {
+  padding-left: 1rem; /* Smaller padding when sidebar is collapsed */
+}
+
+.sidebarOpen .mainContentWrapper {
+  padding-left: 16rem; /* Default padding when sidebar is open (adjust based on sidebar width) */
+}
+
+/* You might also use this for sticky headers or footers if Tailwind's
+   utilities aren't sufficient for a specific edge case. */

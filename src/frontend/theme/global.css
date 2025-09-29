@@ -1,0 +1,31 @@
+/* src/frontend/theme/global.css */
+@import "tailwindcss";
+
+/* Add any custom global styles here */
+body {
+  font-family: 'Inter', sans-serif; /* Example: If you want to use Google Fonts */
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Custom scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* bg-gray-100 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af; /* gray-400 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* gray-500 */
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

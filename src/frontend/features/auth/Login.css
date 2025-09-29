@@ -1,0 +1,127 @@
+/* --- Global Layout --- */
+.login-container {
+    display: flex;
+    min-height: 100vh; /* Full screen height */
+    width: 100%;
+    /* Match homepage feel: white -> emerald-50 gradient */
+    background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
+}
+
+/* --- Left Panel: Form Panel --- */
+.form-panel {
+    flex: 0 0 500px; /* Fixed width for the form side */
+    padding: 60px;
+    background: #fff;
+    /* Clean, defined boundary */
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.05); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the form content */
+}
+
+.form-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Right Panel: Image Panel (Matching the Image Aesthetic) --- */
+.image-panel {
+    flex: 1; /* Takes up all remaining space */
+    /* Use public asset so path resolves at /login-bg.jpg */
+    background: 
+      linear-gradient(180deg, rgba(16, 185, 129, 0.45), rgba(13, 148, 136, 0.45)), /* emerald-500 -> teal-600 */
+      url('/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Text at the bottom */
+    padding: 40px;
+    color: #fff;
+}
+
+.image-overlay-text h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.image-overlay-text p {
+    font-size: 1.1rem;
+    color: #c0e0ff;
+}
+
+/* --- Form Elements and Links --- */
+.error-message {
+    color: #e53e3e; /* Red for errors */
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.forgot-password-link, .signup-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff; /* Primary link color */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password-link:hover, .signup-link:hover {
+    color: #0056b3;
+}
+
+/* Style the main button to match the green in your image */
+.login-button {
+    /* Assuming your Button component adds padding and basic styles */
+    background-color: #059669 !important; /* emerald-600 */
+    color: white !important;
+    padding: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover:not(:disabled) {
+    background-color: #047857 !important; /* emerald-700 */
+}
+
+.login-button:disabled {
+    background-color: #86efac !important; /* emerald-200 */
+    cursor: not-allowed;
+}
+
+.signup-text {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+}
